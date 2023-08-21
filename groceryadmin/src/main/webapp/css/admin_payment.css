@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+/* body{
+    min-height: 100vh;
+    overflow: hidden;
+} */
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+h1,h2{
+    color:#444;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    color:#999;
+}
+.side-menu{
+    position:fixed;
+    background: #27ae60;
+    width:20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.side-menu .shop-name{
+    height: 23vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+}
+.side-menu .shop-name h1{
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.side-menu li a{
+    font-size: 24px;
+    padding:10px 40px;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+.side-menu li i{
+    padding-right: 1rem;
+}
+.side-menu li a:hover{
+    background: white;
+    color:rgb(15, 29, 15) ;
+    font-weight: bold;
+
+}
+.container{
+    position:absolute;
+    right:0;
+    /* width:77.5vw; */
+    width:80vw;
+    /* height: 100vh; */
+    background: #eee;
+}
+.container .header{
+    position:fixed;
+    top:0;
+    right: 0;
+    width: 80vw;
+    height:10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.container .header .nav{
+    width:90%;
+    display: flex;
+    align-items: center;
+    position:fixed;
+}
+.container .header .nav .search {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}   
+.container .header .nav .search input[type=text]{
+    border: none;
+    background: #f1f1f1;
+    padding:10px;
+    width:40%;
+}
+.container .header .nav .search input[type=text]:after{
+	border:none;
+	}
+.container .header .nav .search button{
+    width: 40px;
+    height: 40px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.container .header .nav .search button i:hover{
+  color: rgb(21, 80, 27);
+}
+
+/* header ends */
+
+p{
+	color: red;
+   font-size:1rem;
+	 text-align: center;
+}
+.container .table{
+    padding-top: 4rem;
+    width: 100%;
+}
+.container .table_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    /* background-color: rgb(240,240,240); */
+}
+.container .table_header p{
+    color: #27ae60;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.table button{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+    font-size:16px ;
+}
+
+
+td button:nth-child(1){
+    background-color:#27ae60 ;
+}
+td button:nth-child(1):hover{
+    background-color:rgb(56, 243, 74) ;
+}
+/* td button:nth-child(2){
+    background-color:red ;
+}
+td button:nth-child(2):hover{
+    background-color:rgb(233, 93, 93) ;
+} */
+/* .container .table_header .add_new{
+    padding:10px 20px;
+    color:#ffffff;
+    background: rgb(19, 138, 31);
+}
+.container .table_header .add_new:hover{
+    background:rgb(56, 243, 74);
+    color:black;
+    font-weight: bold;
+} */
+
+.container .table_section{
+    height: 630px;
+    overflow: auto;
+}
+.container .table_section table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 800px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    overflow: hidden;
+}
+.container .table_section table thead{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.container .table_section table thead th{
+    position: sticky;
+    top:0;
+    background-color:#f6f9fc;
+    font-size: 15px;
+}
+th,td{
+    border-bottom: 1px solid #dddddd;
+    padding:1rem 0.5rem;
+    word-break: break-all;
+    text-align: center;
+}
+tr:hover td{
+    color:#27ae60;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+table button{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+    font-size:15px ;
+}
+table button a{
+    color: #ffffff;
+    font-size:15px ;
+}
+
+td button{
+    background-color:#27ae60 ;
+}
+td button:hover{
+    background-color:rgb(56, 243, 74) ;
+}
+/* select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('/image/dropdown.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right center;
+    padding:0.2rem 1rem;
+    padding-right: 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #eee;
+    border: none;
+    outline: none;
+  }
+select:hover{
+    background-color: #f6f9fc;
+} */
+
+.status{
+    border-radius: 2rem;
+    background-color: red;
+    padding:0.4rem 0;
+    text-align: center;
+    /* width: 6rem; */
+}
+.status.Unpaid{
+    background-color:#d893a3 ;
+    color:#b30021;
+}
+.status.Paid{
+    background-color:#86e49d ;
+    color:#006b21;
+}
+.status.Pending{
+    background-color:#ebc474 ;
+    color:black;
+}
+  
+  
+/* .table::-webkit-scrollbar{
+    height:0.5rem;
+    width: 0.5px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+} */
+
+@media screen and (max-width:1050px){
+    .side-menu li{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:940px){
+    .side-menu li span{
+        display: none;
+    }
+    .side-menu{
+        align-items: center;
+    }
+    .side-menu li i{
+    font-size: 25px;
+    align-items: center;
+    }
+    /* .shop-name h1{
+        font-size: 23px;
+    } */
+    .side-menu .shop-name h1{
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    .side-menu li a:hover{
+    background:none;
+        
+    }
+    .side-menu li a i{
+        padding-right: 0;
+    }
+
+}
+@media screen and (max-width:750px){
+    .shop-name h1{
+        font-size: 18px;
+        font-weight: bold;
+    }
+}

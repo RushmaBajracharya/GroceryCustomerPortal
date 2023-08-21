@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    min-height: 100vh;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+h1,h2{
+    color:#444;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    color:#999;
+}
+.side-menu{
+    position:fixed;
+    background: #27ae60;
+    width:20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.side-menu .shop-name{
+    height: 23vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+}
+.side-menu .shop-name h1{
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.side-menu li a{
+    font-size: 24px;
+    padding:10px 40px;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+.side-menu li i{
+    padding-right: 1rem;
+}
+.side-menu li a:hover{
+    background: white;
+    color:rgb(15, 29, 15) ;
+    font-weight: bold;
+
+}
+.container{
+    position:absolute;
+    right:0;
+    /* width:77.5vw; */
+    width:80vw;
+    height: 100vh;
+    background: #eee;
+}
+.container .header{
+    position:fixed;
+    top:0;
+    right: 0;
+    width: 80vw;
+    height:10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.container .header .nav{
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+}
+.container .header .nav .search {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}   
+.container .header .nav .search input[type=text]{
+    border: none;
+    background: #f1f1f1;
+    padding:10px;
+    width:40%;
+}
+.container .header .nav .search input[type=text]:after{
+	border:none
+	}
+.container .header .nav .search button{
+    width: 40px;
+    height: 38px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.container .header .nav .search form button i:hover{
+  color: rgb(21, 80, 27);
+}
+
+
+
+#purchase-form{
+    background-color:lightgreen ;
+    width:450px;
+    padding:30px 40px;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    top:56%;
+    left:50%;
+    border-radius:8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    font-size:1rem ;
+}
+#purchase-form h1{
+    /* border-bottom: 1px solid silver; */
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+}
+label{
+    font-weight: 500;
+    color:black;
+}
+#purchase-form input{
+    display: block;
+    width: 100%;
+    margin-top:5px;
+    margin-bottom:5px;
+    padding:10px;
+    border-radius: 5px;
+    outline: none;
+    color:black;
+    border:2px solid #029330;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+/* #password{
+    margin-bottom: 30px;
+}
+input[type="password"]{
+    border:2px solid #c2c2c2;
+    box-shadow: var(--box-shadow);
+}*/
+#purchase-form input[type="submit"]{ 
+    background-color: #27ae60;
+    border: none;
+    color:white;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#purchase-form input[type="submit"]:hover{
+    background-color:rgb(56, 243, 74) ;
+    color:black;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:1050px){
+    .side-menu li{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:940px){
+    .side-menu li span{
+        display: none;
+    }
+    .side-menu{
+        align-items: center;
+    }
+    .side-menu li i{
+    font-size: 25px;
+    align-items: center;
+    }
+    /* .shop-name h1{
+        font-size: 23px;
+    } */
+    .side-menu .shop-name h1{
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    .side-menu li a:hover{
+    background:none;
+        
+    }
+    .side-menu li a i{
+        padding-right: 0;
+    }
+
+}
+@media screen and (max-width:750px){
+    .shop-name h1{
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
